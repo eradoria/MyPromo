@@ -1,0 +1,11 @@
+body{
+  width: 1200px;
+  margin: auto;
+}
+
+.home-container{
+  height: 100vh;
+  width: auto;
+  align-items: center;
+  justify-content: center;
+}
