@@ -1,6 +1,7 @@
 import React from "react";
+import "../Home.css";
 import Background from "../images/townsquare.jpg";
-import Data from "../data.json"
+import Data from "../data.json";
 
 function Home() {
   return (
@@ -14,20 +15,27 @@ function Home() {
         opacity: "70%",
       }}
     >
-
-      {
-        Data.map(x =>
-          {
-            return(
-              <div className="biz-card" key={x.id}>
-                {x.company_name}
-                {x.address}
-                {x.city}
-                {x.product}
+      {Data.map((x) => {
+        return (
+          <div className="card" key={x.id}>
+            <div className="card-inner">
+              <div className="card-face card-face--front">
+                <img></img>
               </div>
-            )
-          })
-      }
+              <div className="card-face card-face--back">
+                <div className="card-content"></div>
+                <div className="card-header"></div>
+                <div className="card-body">
+                  {x.company_name}
+                  {x.address}
+                  {x.city}
+                  {x.product}
+                </div>
+              </div>
+            </div>
+          </div>
+        );
+      })}
       <div>
         <p>This is the Home Page</p>
       </div>
