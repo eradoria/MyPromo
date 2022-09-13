@@ -3,6 +3,13 @@
     gap: 30px;
 }
 
+.card-container{
+    display: flex;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+}
+
 .card {
   /* margin: 100px auto 0; */
   width: 400px;

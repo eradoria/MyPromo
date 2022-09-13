@@ -10,9 +10,17 @@ html {
 body {
   font-size: 1.6rem;
 }
+
 li {
   list-style: none;
 }
+
+.nav-link {
+  text-decoration: none;
+  color: darkgray;
+  font-size: 20px;
+}
+
 a {
   text-decoration: none;
   color: darkgray;
