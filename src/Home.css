@@ -1,19 +1,23 @@
 .home-container{
     display: flex;
     gap: 30px;
-}
-
-.card-container{
+   
+  }
+  
+  .card-container{
     display: flex;
-    width: 80%;
+    flex-wrap: wrap;
+    gap: 10px;
+    /* width: 80%; */
     justify-content: center;
     align-items: center;
+    height: 100vh;
 }
 
 .card {
   /* margin: 100px auto 0; */
-  width: 400px;
-  height: 400px;
+  width: 300px;
+  height: 300px;
 }
 
 .card-inner {
