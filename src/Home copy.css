@@ -1,0 +1,104 @@
+:root {
+  --primary: #ffce00;
+  --secondary: #fe4880;
+  --dark: #212121;
+  --light: #f3f3f3;
+}
+
+.home-container {
+  display: flex;
+  gap: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  /* width: 80%; */
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  margin: 100px auto 0;
+  width: 200px;
+  height: 350px;
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  position: relative;
+}
+
+.card-inner.is-flipper {
+  transform: rotateY(180deg);
+}
+
+.card-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0px 3px 18px 3px rgba(0, 0, 0, 0.2);
+}
+
+.card-face--front {
+  /* background-image: url(
+    ./images/companyLogo.png
+  ); */
+  /* background-image: linear-gradient(
+    to bottom right,
+    var(#ffce00),
+    var (white)
+  ); */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-face--front h2 {
+  color: #f3f3f3;
+  font-size: 32px;
+}
+
+.card-face--back {
+  background-color: var(--light);
+  transform: rotateY(180deg);
+}
+
+.card-content {
+  width: 100%;
+  height: 100%;
+}
+
+.card-header {
+  position: relative;
+  padding: 30px 30px 40px;
+}
+
+.card-header:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  border-radius: 0 0 50% 0;
+  background-image: linear-gradient(
+    to bottom left,
+    var(--primary) 10%,
+    var(--secoundary) 115%
+  );
+}

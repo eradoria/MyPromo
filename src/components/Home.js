@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import "../Home.css";
 import Background from "../images/townsquare.jpg";
+import CardFront from "../images/companyLogo.png";
+import { Card } from "./Card";
 import Data from "../data.json";
 
-function Home() {
+function Home(props) {
+
   return (
     <div
       className="home-container"
@@ -15,29 +18,7 @@ function Home() {
         opacity: "70%",
       }}
     >
-      <div className="card-container">
-        {Data.map((x) => {
-          return (
-            <div className="card" key={x.id}>
-              <div className="card-inner">
-                <div className="card-face card-face--front">
-                  <img></img>
-                </div>
-                <div className="card-face card-face--back">
-                  <div className="card-content"></div>
-                  <div className="card-header"></div>
-                  <div className="card-body">
-                    {x.company_name}
-                    {x.address}
-                    {x.city}
-                    {x.product}
-                  </div>
-                </div>
-              </div>
-            </div>
-          );
-        })}
-      </div>
+      <Card/>;
     </div>
   );
 }
