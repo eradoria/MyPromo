@@ -5,8 +5,7 @@ import CardFront from "../images/companyLogo.png";
 import { Card } from "./Card";
 import Data from "../data.json";
 
-function Home(props) {
-
+function Home() {
   return (
     <div
       className="home-container"
@@ -18,7 +17,7 @@ function Home(props) {
         opacity: "70%",
       }}
     >
-      <Card/>;
+     <Card />
     </div>
   );
 }

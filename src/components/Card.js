@@ -6,10 +6,8 @@ import Data from "../data.json";
 export function Card(props) {
   const [flip, setFlip] = useState(false);
 
-  const cardToggle = (index) => {
-    setFlip((prev) => {
-      return prev === index ? null : index;
-    });
+  const cardToggle = () => {
+    flip === true ? setFlip("front") : setFlip("back");
   };
 
   return (
@@ -17,9 +15,9 @@ export function Card(props) {
       {Data.map((x) => {
         return (
           <div
-            className={`card ${flip ? "flip" : ""}`}
-            onClick={() => setFlip(!flip)}
+            className={`card ${flip === x.id ? "flip" : ""}`}
             key={x.id}
+            onClick={() => setFlip(x.id)}
           >
             <div
               className="front"
@@ -31,15 +29,20 @@ export function Card(props) {
                 opacity: "90%",
               }}
             >
-              {x.company_name}
+              <h3>{x.company_name}</h3>
             </div>
             <div className="back">
-              <div className="card-content"></div>
-              <div className="card-header"></div>
               <div className="card-body">
-                {x.address}
+                <h2> Business: </h2>
+                <h3>{x.company_name}</h3> <br />
+                <h3>Product:</h3>
+                <h3> {x.product}</h3> <br />
+                <h3>Address:</h3>
+                {x.address} <br />
                 {x.city}
-                {x.product}
+              </div>
+              <div className="card-button-container">
+                <button className="card-button"> See More</button>
               </div>
             </div>
           </div>
