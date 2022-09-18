@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link, useParams } from "react-router-dom";
 import "../Card.css";
 import CardFront from "../images/companyLogo.png";
 import Data from "../data.json";
@@ -9,6 +10,8 @@ export function Card(props) {
   const cardToggle = () => {
     flip === true ? setFlip("front") : setFlip("back");
   };
+
+  const handleButton = () => {};
 
   return (
     <div className="card-container">
@@ -42,7 +45,9 @@ export function Card(props) {
                 {x.city}
               </div>
               <div className="card-button-container">
-                <button className="card-button"> See More</button>
+                <button className="card-button">
+                    <Link to={`/${x.id}`}> Details</Link>
+                </button>
               </div>
             </div>
           </div>

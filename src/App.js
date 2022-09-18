@@ -13,7 +13,7 @@ function App() {
       <Navigation />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/company_name" element={<Biz />} />
+        <Route path="/:id" element={<Biz />} />
         <Route path="/login" element={<Login />} />
         <Route path="*" element={<ErrorPage/>} />
       </Routes>

@@ -1,5 +1,4 @@
 .card-container {
-  border: solid green 1px;
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
@@ -48,12 +47,12 @@
 }
 
 .card .back {
-  color: #fff;
+  color: rgb(227, 227, 227);
   text-align: center;
   transform: rotateY(180deg);
   border-radius: 0.8rem;
+  backdrop-filter: blur(8.5px);
   box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.3);
-  /* background-color: rgba(171, 171, 171, 0.1); */
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) , rgb(52, 52, 52) 40% );
 }
 
