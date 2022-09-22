@@ -6,35 +6,41 @@ import bcrypt from "bcryptjs";
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 
 function Login() {
-  const [user, setUser] = useState("");
-  const [password, setPassword] = useState("");
-
+  const [user, setUser] = useState({ email: "", password: "" });
   const emailInputRef = useRef();
   const passwordInputRef = useRef();
 
-  useEffect(() => {
-    // POST request using axios inside useEffect React hook
-    const article = { title: "React Hooks POST Request Example" };
-    axios
-      .post("https://js-311-backend.vercel.app/auth/signup", article)
-      .then((response) => setUser(response.data));
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     const data = await fetch("https://js-311-backend.vercel.app/auth/");
 
-    // empty dependency array means this effect will only run once (like componentDidMount in classes)
-  }, []);
+  //     const json = await data.json();
+  //   };
+  //   console.log("fire");
+  //   fetchData();
+  // }, []);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = () => {
+    const email = emailInputRef.current.value;
+    const password = passwordInputRef.current.value;
+
+    console.log(email);
+    // POST request using axios with set headers
+    // const article = { title: "React POST Request Example" };
+    // const headers = {
+    //   Authorization: "Bearer my-token",
+    //   "My-Custom-Header": "foobar",
+    // };
     axios
-      .post(`https://js-311-backend.vercel.app/auth/login`, {
-        email: user,
-        password: password,
-        // headers: {
-        //   "x-access-token": localStorage.getItem("token"),
-        // },
+      .post("https://js-311-backend.vercel.app/auth/login", {
+        email: user.email,
+        password: user.password,
       })
       .then((response) => {
-        console.log(response.headers);
+        document.cookie = `JWT=${response.headers.authorization}; max-age=900000`;
       });
+
+    console.log("respone", user);
   };
 
   ////////////////////////////////////////////////////////////////////////////////////////
@@ -87,27 +93,19 @@ function Login() {
     >
       <div className="MainContainer">
         <h1 className="WelcomeText">Welcome</h1>
-
-        <div className="InputContainer">
-          <input
-            type="email"
-            placeholder="Email"
-            onChange={(e) => {
-              setUser(e.target.value);
-            }}
-          />
-          <input
-            type="password"
-            placeholder="Password"
-            onChange={(e) => {
-              setPassword(e.target.value);
-            }}
-          />
-        </div>
-        <div className="ButtonContainer" onClick={handleSubmit}>
-          <button type="submit">Login </button>
-        </div>
-
+        <form className="FormContainer" action={handleSubmit}>
+          <div className="InputContainer">
+            <input type="email" placeholder="Email" ref={emailInputRef} />
+            <input
+              type="password"
+              placeholder="Password"
+              ref={passwordInputRef}
+            />
+          </div>
+          <div className="ButtonContainer">
+            <button type="submit">Login </button>
+          </div>
+        </form>
         <h3>Or Follow Us On</h3>
         <div className="HorizontalRule" />
         <div className="IconContainer">

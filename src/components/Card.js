@@ -1,21 +1,32 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import "../Card.css";
 import CardFront from "../images/companyLogo.png";
 import Data from "../data.json";
 
 export function Card(props) {
+  const [cards, setCards] = useState([]);
   const [flip, setFlip] = useState(false);
 
-  const cardToggle = () => {
-    flip === true ? setFlip("front") : setFlip("back");
-  };
+  useEffect(() => {
+    const fetchData = async () => {
+      const data = await fetch("https://js-311-backend.vercel.app/promo");
 
-  const handleButton = () => {};
+      const json = await data.json();
+      setCards(json);
+    };
+
+    fetchData();
+  }, []);
+
+  useEffect(() => {
+    console.log("updated");
+    console.log(cards);
+  }, [cards]);
 
   return (
     <div className="card-container">
-      {Data.map((x) => {
+      {cards.map((x) => {
         return (
           <div
             className={`card ${flip === x.id ? "flip" : ""}`}
@@ -46,7 +57,7 @@ export function Card(props) {
               </div>
               <div className="card-button-container">
                 <button className="card-button">
-                    <Link to={`/${x.id}`}> Details</Link>
+                  <Link to={`/${x.id}`}> Details</Link>
                 </button>
               </div>
             </div>
