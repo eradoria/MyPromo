@@ -1,160 +1,177 @@
 .biz-container {
-    border: solid red 1px;
-    height: 100vh;
-    width: 100%;
-    padding-left: 20px;
-    padding-right: 20px; 
-    display: flex;
-    align-items: center;
-    gap: 30px;
-  }
-
-  .MainContainer {
-    border: solid red 1px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 70vh;
-    width: 30vw;
-    gap: 10px;
-    background: rgba(255, 255, 255, 0.15);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(8.5px);
-    border-radius: 10px;
-    color: rgb(15, 15, 15);
-    text-transform: uppercase;
-    letter-spacing: 0.4rem;
-  }
-
-  .MainContainer h1,
-  .MainContainer h2,
-  .MainContainer h3{
-    color: black ;
-    transform: none;
-    cursor: none;
-  }
-
-  .InfoContainer {
-    border: solid green 1px;
-    padding-top: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    height: 20vh;
-    width: 30vw;
-    gap: 10px;
-  }
-
-  .HorizontalRule{
-    width: 90%;
-    height: 0.3rem;
-    border-radius: 0.8rem;
-    border: none;
-    margin: 1.5rem 0 1rem 0;    
-    background: linear-gradient(to right, rgb(0, 48, 126) 0%, #03217b 79%);
-    backdrop-filter: blur(25px);
+  border: solid red 1px;
+  height: 100vh;
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
 }
 
-.IconContainer{
-    display: flex;
-    justify-content: space-evenly;
-    margin: 2rem 0 3rem 0;
-    width: 80%;
+.MainContainer {
+  border: solid red 1px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 70vh;
+  width: 30vw;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(8.5px);
+  border-radius: 10px;
+  color: rgb(15, 15, 15);
+  text-transform: uppercase;
+  letter-spacing: 0.4rem;
 }
 
-.Icon{
-    height: 6.5rem;
-    width: 6.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 3rem ;
-    color: #fff;
-    background: linear-gradient(to right, #0546A0 0%, #663FB6 100%);
-    cursor: pointer;
-}
-.Icon2{
-    height: 6.5rem;
-    width: 6.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 4rem ;
-    color:#fff;
-    background: linear-gradient(to right, #A12AC4 0%, #ED586C 48%, #F0A853 100% );
-    cursor: pointer;
-}
-.Icon3{
-    height: 6.5rem;
-    width: 6.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 4rem ;
-    color: rgb(0, 132, 255);
-    cursor: pointer;
+.MainContainer h1,
+.MainContainer h2,
+.MainContainer h3 {
+  color: black;
+  transform: none;
+  cursor: none;
 }
 
+.InfoContainer {
+  border: solid green 1px;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 20vh;
+  width: 30vw;
+  gap: 10px;
+}
 
+.HorizontalRule {
+  width: 90%;
+  height: 0.3rem;
+  border-radius: 0.8rem;
+  border: none;
+  margin: 1.5rem 0 1rem 0;
+  background: linear-gradient(to right, rgb(0, 48, 126) 0%, #03217b 79%);
+  backdrop-filter: blur(25px);
+}
+
+.IconContainer {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 2rem 0 3rem 0;
+  width: 80%;
+}
+
+.Icon {
+  height: 6.5rem;
+  width: 6.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3rem;
+  color: #fff;
+  background: linear-gradient(to right, #0546a0 0%, #663fb6 100%);
+  cursor: pointer;
+}
+.Icon2 {
+  height: 6.5rem;
+  width: 6.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4rem;
+  color: #fff;
+  background: linear-gradient(to right, #a12ac4 0%, #ed586c 48%, #f0a853 100%);
+  cursor: pointer;
+}
+.Icon3 {
+  height: 6.5rem;
+  width: 6.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4rem;
+  color: rgb(0, 132, 255);
+  cursor: pointer;
+}
+/* 
+///////////////////////////////////////////// */
 .RightSideContainer {
-    border: solid red 1px;
-    height: 90vh;
-    width: 70%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-  }
+  border: solid red 1px;
+  height: 90vh;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.MainContainer h2 {
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  gap: 10px;
+  border-radius: 10px;
+  backdrop-filter: blur(1.5px);
+  outline: none;
+}
+.BottomContainer {
+  margin: 1rem 0 2rem 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
 
 .MapContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 50vh;
-    width: 60vw;
-    background: rgba(255, 255, 255, 0.15);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(8.5px);
-    border-radius: 10px;
-    color: rgb(15, 15, 15);
-    text-transform: uppercase;
-    letter-spacing: 0.4rem;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 50vh;
+  width: 60vw;
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(8.5px);
+  border-radius: 10px;
+  color: rgb(15, 15, 15);
+  text-transform: uppercase;
+  letter-spacing: 0.4rem;
+}
 
 .ProductContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 30vh;
-    width: 60vw;
-    background: rgba(255, 255, 255, 0.15);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(8.5px);
-    border-radius: 10px;
-    color: rgb(15, 15, 15);
-    text-transform: uppercase;
-    letter-spacing: 0.4rem;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 30vh;
+  width: 60vw;
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(8.5px);
+  border-radius: 10px;
+  color: rgb(15, 15, 15);
+  text-transform: uppercase;
+  letter-spacing: 0.4rem;
+}
 
-  .LikeButton{
-    width: 120px;
-    background: gainsboro;
-    border-radius: 8px;
-    font-size: 20px;
-    color: black;
-    text-align: center;
-    overflow: hidden;
-    cursor: pointer;
-  }
+.LikeButton {
+  width: 120px;
+  background: gainsboro;
+  border-radius: 8px;
+  font-size: 20px;
+  color: black;
+  text-align: center;
+  overflow: hidden;
+  cursor: pointer;
+}
 
-  .active-like{
-    width: 120px;
-    background: #008Cba ;
-    border-radius: 8px;
-    font-size: 20px;
-    color: black;
-    text-align: center;
-    overflow: hidden;
-    cursor: pointer;
-  }
+.active-like {
+  width: 120px;
+  background: #008cba;
+  border-radius: 8px;
+  font-size: 20px;
+  color: black;
+  text-align: center;
+  overflow: hidden;
+  cursor: pointer;
+}

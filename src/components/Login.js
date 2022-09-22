@@ -10,10 +10,8 @@ function Login() {
   const navigate = useNavigate();
 
   const [user, setUser] = useState("");
+  const [newUser, setNewUser] = useState(false);
   const [password, setPassword] = useState("");
-
-  const emailInputRef = useRef();
-  const passwordInputRef = useRef();
 
   const loggedIn = (e) => {
     document.cookie = "loggedIn=true;max-age=60*10000";
@@ -52,10 +50,10 @@ function Login() {
       })
       .then((response) => {
         console.log(response);
+        setNewUser(true);
       });
   };
 
- 
   return (
     <div
       className="login-container"
@@ -69,7 +67,7 @@ function Login() {
     >
       <div className="MainContainer">
         <h1 className="WelcomeText">Welcome</h1>
-
+        {newUser ? <h2 className="banner">New User! Sign In</h2> : ""}
         <div className="InputContainer">
           <input
             type="email"
@@ -107,7 +105,9 @@ function Login() {
         <div className="BottomContainer">
           <h2> Need To Contact Us?</h2>
           <h2> New User? </h2>
-          <button type="submit" onClick={signUpForm} >Signup </button>
+          <button type="submit" onClick={signUpForm}>
+            Signup{" "}
+          </button>
         </div>
       </div>
     </div>

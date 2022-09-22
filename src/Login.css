@@ -67,70 +67,77 @@ button {
   cursor: pointer;
 }
 
-.HorizontalRule{
-    width: 90%;
-    height: 0.3rem;
-    border-radius: 0.8rem;
-    border: none;
-    margin: 1.5rem 0 1rem 0;    
-    background: linear-gradient(to right, rgb(0, 48, 126) 0%, #03217b 79%);
-    backdrop-filter: blur(25px);
+.HorizontalRule {
+  width: 90%;
+  height: 0.3rem;
+  border-radius: 0.8rem;
+  border: none;
+  margin: 1.5rem 0 1rem 0;
+  background: linear-gradient(to right, rgb(0, 48, 126) 0%, #03217b 79%);
+  backdrop-filter: blur(25px);
 }
 
-.IconContainer{
-    display: flex;
-    justify-content: space-evenly;
-    margin: 2rem 0 3rem 0;
-    width: 80%;
+.IconContainer {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 2rem 0 3rem 0;
+  width: 80%;
 }
 
-.Icon{
-    height: 6.5rem;
-    width: 6.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 3rem ;
-    color: #fff;
-    background: linear-gradient(to right, #0546A0 0%, #663FB6 100%);
-    cursor: pointer;
+.Icon {
+  height: 6.5rem;
+  width: 6.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3rem;
+  color: #fff;
+  background: linear-gradient(to right, #0546a0 0%, #663fb6 100%);
+  cursor: pointer;
 }
-.Icon2{
-    height: 6.5rem;
-    width: 6.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 4rem ;
-    color:#fff;
-    background: linear-gradient(to right, #A12AC4 0%, #ED586C 48%, #F0A853 100% );
-    cursor: pointer;
+.Icon2 {
+  height: 6.5rem;
+  width: 6.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4rem;
+  color: #fff;
+  background: linear-gradient(to right, #a12ac4 0%, #ed586c 48%, #f0a853 100%);
+  cursor: pointer;
 }
-.Icon3{
-    height: 6.5rem;
-    width: 6.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 4rem ;
-    color: rgb(0, 132, 255);
-    cursor: pointer;
+.Icon3 {
+  height: 6.5rem;
+  width: 6.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4rem;
+  color: rgb(0, 132, 255);
+  cursor: pointer;
 }
 
-.MainContainer h2{
-    cursor: pointer;
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    gap:10px;
-    border-radius: 10px;
-    backdrop-filter: blur(1.5px);
-    outline: none;
+.MainContainer h2 {
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  gap: 10px;
+  border-radius: 10px;
+  backdrop-filter: blur(1.5px);
+  outline: none;
 }
+
 .BottomContainer {
-    margin: 1rem 0 2rem 0;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
-  }
+  margin: 1rem 0 2rem 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.banner {
+  width: 29vw;
+  background-color: #4593ff;
+  border-radius: none;
+  text-align: center;
+}
