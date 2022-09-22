@@ -1,4 +1,5 @@
 import React, { useRef, useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import Loginbackground from "../images/loginbackground.jpg";
 import "../Login.css";
@@ -6,74 +7,55 @@ import bcrypt from "bcryptjs";
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 
 function Login() {
+  const navigate = useNavigate();
+
   const [user, setUser] = useState("");
   const [password, setPassword] = useState("");
 
   const emailInputRef = useRef();
   const passwordInputRef = useRef();
 
-  useEffect(() => {
-    // POST request using axios inside useEffect React hook
-    const article = { title: "React Hooks POST Request Example" };
-    axios
-      .post("https://js-311-backend.vercel.app/auth/signup", article)
-      .then((response) => setUser(response.data));
-
-    // empty dependency array means this effect will only run once (like componentDidMount in classes)
-  }, []);
+  const loggedIn = (e) => {
+    document.cookie = "loggedIn=true;max-age=60*10000";
+    navigate("/");
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const headers = {
+      "Access-Control-Allow-Origin": "*",
+      "Content-Type": "application/json",
+    };
     axios
       .post(`https://js-311-backend.vercel.app/auth/login`, {
         email: user,
         password: password,
-        // headers: {
-        //   "x-access-token": localStorage.getItem("token"),
-        // },
       })
       .then((response) => {
-        console.log(response.headers);
+        console.log(response);
+        document.cookie = `jwt=${response.headers.authorization};max-age=60*10000`;
+        loggedIn();
       });
   };
 
   ////////////////////////////////////////////////////////////////////////////////////////
   const signUpForm = (e) => {
-    const email = emailInputRef.current.value;
-    const password = passwordInputRef.current.value;
-
-    const hashedPassword = bcrypt.hashSync(password, 10);
-
-    //call Api here
-    window.localStorage.setItem(
-      "login",
-      JSON.stringify({ email, hashedPassword })
-    );
+    e.preventDefault();
+    const headers = {
+      "Access-Control-Allow-Origin": "*",
+      "Content-Type": "application/json",
+    };
+    axios
+      .post(`https://js-311-backend.vercel.app/auth/signup`, {
+        email: user,
+        password: password,
+      })
+      .then((response) => {
+        console.log(response);
+      });
   };
 
-  const loginForm = (e) => {
-    const email = emailInputRef.current.value;
-    const password = passwordInputRef.current.value;
-
-    //call API here
-    const getHashedPassword = JSON.parse(
-      window.localStorage.getItem("login")
-    ).hashedPassword;
-
-    console.log(getHashedPassword);
-
-    //Match password
-    bcrypt.compare(password, getHashedPassword, function (err, isMatch) {
-      if (err) {
-        throw err;
-      } else if (!isMatch) {
-        console.log("Password Incorrect");
-      } else {
-        console.log("Password correct");
-      }
-    });
-  };
-
+ 
   return (
     <div
       className="login-container"
@@ -124,7 +106,8 @@ function Login() {
         <div className="HorizontalRule" />
         <div className="BottomContainer">
           <h2> Need To Contact Us?</h2>
-          <h2> New User?</h2>
+          <h2> New User? </h2>
+          <button type="submit" onClick={signUpForm} >Signup </button>
         </div>
       </div>
     </div>

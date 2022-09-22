@@ -33,6 +33,11 @@ function Login() {
     // };
     axios
       .post("https://js-311-backend.vercel.app/auth/login", {
+        headers: {
+          AccessControlAlloworigin:'*',
+          
+        }
+      },{
         email: user.email,
         password: user.password,
       })
