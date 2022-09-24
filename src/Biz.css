@@ -1,5 +1,4 @@
 .biz-container {
-  border: solid red 1px;
   height: 100vh;
   width: 100%;
   padding-left: 20px;
@@ -9,8 +8,8 @@
   gap: 30px;
 }
 
-.MainContainer {
-  border: solid red 1px;
+.BizMainContainer {
+  /* border: solid red 1px; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -19,7 +18,7 @@
   gap: 10px;
   background: rgba(255, 255, 255, 0.15);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(8.5px);
+  backdrop-filter: blur(18.5px);
   border-radius: 10px;
   color: rgb(15, 15, 15);
   text-transform: uppercase;
@@ -35,7 +34,6 @@
 }
 
 .InfoContainer {
-  border: solid green 1px;
   padding-top: 20px;
   display: flex;
   flex-direction: column;
@@ -98,7 +96,7 @@
 /* 
 ///////////////////////////////////////////// */
 .RightSideContainer {
-  border: solid red 1px;
+  /* border: solid red 1px; */
   height: 90vh;
   width: 70%;
   display: flex;
@@ -128,8 +126,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 50vh;
+  height: 40vh;
   width: 60vw;
+  padding-top: 35px;
   background: rgba(255, 255, 255, 0.15);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(8.5px);
@@ -155,7 +154,7 @@
 }
 
 .LikeButton {
-  width: 120px;
+  width: 180px;
   background: gainsboro;
   border-radius: 8px;
   font-size: 20px;
@@ -163,10 +162,11 @@
   text-align: center;
   overflow: hidden;
   cursor: pointer;
+  text-transform: none;
 }
 
 .active-like {
-  width: 120px;
+  width: 180px;
   background: #008cba;
   border-radius: 8px;
   font-size: 20px;
@@ -174,4 +174,5 @@
   text-align: center;
   overflow: hidden;
   cursor: pointer;
+  text-transform: none;
 }

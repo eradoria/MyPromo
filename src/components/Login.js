@@ -3,15 +3,16 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import Loginbackground from "../images/loginbackground.jpg";
 import "../Login.css";
-import bcrypt from "bcryptjs";
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 
 function Login() {
   const navigate = useNavigate();
 
   const [user, setUser] = useState("");
-  const [newUser, setNewUser] = useState(false);
   const [password, setPassword] = useState("");
+  const [newUser, setNewUser] = useState(false);
+  const [userLoggedIn, setUserLoggedIn] = useState(false);
+  const [signUpHidden, setSignUpHidden] = useState(true);
 
   const loggedIn = (e) => {
     document.cookie = "loggedIn=true;max-age=60*10000";
@@ -33,6 +34,7 @@ function Login() {
         console.log(response);
         document.cookie = `jwt=${response.headers.authorization};max-age=60*10000`;
         loggedIn();
+        setUserLoggedIn(true);
       });
   };
 
@@ -51,6 +53,7 @@ function Login() {
       .then((response) => {
         console.log(response);
         setNewUser(true);
+        setSignUpHidden(true);
       });
   };
 
@@ -104,12 +107,39 @@ function Login() {
         <div className="HorizontalRule" />
         <div className="BottomContainer">
           <h2> Need To Contact Us?</h2>
-          <h2> New User? </h2>
-          <button type="submit" onClick={signUpForm}>
-            Signup{" "}
-          </button>
+          <h2 onClick={() => setSignUpHidden(false)}> New User? </h2>
         </div>
       </div>
+
+      {/* /////////////////////////////////////////////////////////////////////////////////// */}
+      {signUpHidden ? null : (
+        <div className="SignUpContainer">
+          <div className="NewUserText">
+            <h2 className="WelcomeText">
+              New User <br /> Fill Out Form Below
+            </h2>
+          </div>
+          <div className="SignUpInputContainer">
+            <input
+              type="email"
+              placeholder="Email"
+              onChange={(e) => {
+                setUser(e.target.value);
+              }}
+            />
+            <input
+              type="password"
+              placeholder="Password"
+              onChange={(e) => {
+                setPassword(e.target.value);
+              }}
+            />
+          </div>
+          <button type="submit" onClick={signUpForm}>
+            Signup{""}
+          </button>
+        </div>
+      )}
     </div>
   );
 }

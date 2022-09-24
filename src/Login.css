@@ -3,6 +3,7 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
+  gap: 20px;
 }
 
 .MainContainer {
@@ -10,7 +11,7 @@
   flex-direction: column;
   align-items: center;
   height: 70vh;
-  width: 30vw;
+  width: 25vw;
   gap: 10px;
   background: rgba(255, 255, 255, 0.15);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
@@ -42,7 +43,7 @@ input {
   width: 80%;
   padding: 1rem;
   outline: none;
-  color: #3c354e;
+  color: black;
   font-size: 2rem;
   font-weight: bold;
 }
@@ -135,9 +136,52 @@ button {
   gap: 30px;
 }
 
+.BottomContainer h2 {
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  gap: 10px;
+  border-radius: 10px;
+  backdrop-filter: blur(1.5px);
+  outline: none;
+  cursor: pointer;
+}
+
 .banner {
-  width: 29vw;
+  width: 24vw;
   background-color: #4593ff;
   border-radius: none;
   text-align: center;
+}
+
+/* ///////////////////////////////Sign Up COntainer////////////////////////////////////// */
+
+.SignUpContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 30vh;
+  width: 25vw;
+  gap: 40px;
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(18.5px);
+  border-radius: 10px;
+  color: rgb(15, 15, 15);
+  text-transform: uppercase;
+  letter-spacing: 0.4rem;
+}
+
+.NewUserText {
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+}
+
+.SignUpInputContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 20%;
+  width: 100%;
+  gap: 10px;
 }

@@ -1,12 +1,17 @@
 import React, { useState, useEffect } from "react";
-import { Link, useParams } from "react-router-dom";
 import "../Card.css";
 import CardFront from "../images/companyLogo.png";
-import Data from "../data.json";
+import { checkAuth } from "../App";
+
+// export const bizFilter = React.createContext('')
 
 export function Card(props) {
+  console.log("props here", props);
+  console.log(checkAuth());
+
   const [cards, setCards] = useState([]);
   const [flip, setFlip] = useState(false);
+  const [fliter, setFliter] = useState("");
 
   useEffect(() => {
     const fetchData = async () => {
@@ -56,9 +61,16 @@ export function Card(props) {
                 {x.city}
               </div>
               <div className="card-button-container">
-                <button className="card-button">
-                  <Link to={`/${x.id}`}> Details</Link>
-                </button>
+                {checkAuth() ? (
+                  <button
+                    className="card-button"
+                    onClick={() => setFliter(x.id)}
+                  >
+                    {/* <Link to={`/${x.id}`}> Details</Link> */}
+                  </button>
+                ) : (
+                  <h3>log in for details</h3>
+                )}
               </div>
             </div>
           </div>

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { checkAuth } from "../App";
 import "../navbar.css";
 
 function Navigation() {
@@ -30,7 +31,7 @@ function Navigation() {
           </Link>
           <Link className="nav-link" to={"/login"}>
             {" "}
-            Login
+            {checkAuth() ? "Logout" : "Login"}
           </Link>
         </li>
       </ul>

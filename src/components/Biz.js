@@ -1,9 +1,16 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import Background from "../images/france.jpg";
+import Map from "./Map"
 import "../Biz.css";
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 
-function Biz() {
+function Biz(props) {
+  console.log('props here',props)
+
+  // const filter = useContext(`${bizFilter}`)
+  // console.log('filter here',filter)
+
+
   const [cards, setCards] = useState([]);
   const [like, setLike] = useState(0);
   const [likeActive, setLikeActive] = useState(false);
@@ -49,7 +56,7 @@ function Biz() {
     >
       {cards.map((x) => {
         return (
-          <div className="MainContainer">
+          <div className="BizMainContainer" key= {x.id}>
             <h1>Welcome To</h1>
             <h1>{x.company_name}</h1>
             <div className="HorizontalRule" />
@@ -76,13 +83,15 @@ function Biz() {
               </div>
             </div>
             <div className="LikeContainer">
-              <button className={[likeActive ? 'active-like': null,'LikeButton']} onClick={handleLike}>Like {like}</button>
+              <button className={[likeActive ? 'active-like': 'LikeButton']} onClick={handleLike}>Likes: {like}</button>
             </div>
           </div>
         );
       })}
       <div className="RightSideContainer">
-        <div className="MapContainer">map</div>
+        <div className="MapContainer">
+          <Map/>
+        </div>
         <div className="ProductContainer">products</div>
       </div>
     </div>
