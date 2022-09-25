@@ -1,7 +1,7 @@
 import React, { useCallback, useState, useMemo, useRef } from "react";
 import { GoogleMap, useJsApiLoader, Marker } from "@react-google-maps/api";
 
-const apiKey = process.env.REACT_MAPS - API_KEY;
+const apiKey = process.env.REACT_MAPS_API_KEY;
 
 const containerStyle = {
   width: "95%",
