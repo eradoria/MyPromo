@@ -20,9 +20,9 @@ function Navigation() {
 
   return (
     <nav className="nav">
-      <a href="#" className="nav-brand">
+      <h3 className="nav-brand">
         My Promo
-      </a>
+      </h3>
       <ul className={active}>
         <li className="nav-item">
           <Link className="nav-link" to={"/"}>
