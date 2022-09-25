@@ -1,7 +1,7 @@
 import React, { useCallback, useState, useMemo, useRef } from "react";
 import { GoogleMap, useJsApiLoader, Marker } from "@react-google-maps/api";
 
-const apiKey = process.env.REACT_APP_GOOGLE_API_KEY;
+const apiKey = process.env.REACT_MAPS - API_KEY;
 
 const containerStyle = {
   width: "95%",
@@ -27,7 +27,7 @@ const Map = (props) => {
 
   const { isLoaded } = useJsApiLoader({
     id: "google-map-script",
-    googleMapsApiKey: "AIzaSyAfQRfxhtSDCA1NKKWRrS-cQ4zB4fHoZEU",
+    googleMapsApiKey: apiKey,
   });
 
   // const mapStyle = useCallback((map) => (mapRef.current = map), []);
@@ -82,6 +82,5 @@ const Map = (props) => {
     <></>
   );
 };
-
 
 export default Map;

@@ -42,6 +42,8 @@
   height: 20vh;
   width: 30vw;
   gap: 10px;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .HorizontalRule {
