@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "../Card.css";
 import CardFront from "../images/companyLogo.png";
 import { checkAuth } from "../App";
+import { Link } from "react-router-dom";
 
 // export const bizFilter = React.createContext('')
 
