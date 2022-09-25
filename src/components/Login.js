@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import Loginbackground from "../images/loginbackground.jpg";
@@ -21,10 +21,6 @@ function Login() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const headers = {
-      "Access-Control-Allow-Origin": "*",
-      "Content-Type": "application/json",
-    };
     axios
       .post(`https://js-311-backend.vercel.app/auth/login`, {
         email: user,
@@ -41,10 +37,6 @@ function Login() {
   ////////////////////////////////////////////////////////////////////////////////////////
   const signUpForm = (e) => {
     e.preventDefault();
-    const headers = {
-      "Access-Control-Allow-Origin": "*",
-      "Content-Type": "application/json",
-    };
     axios
       .post(`https://js-311-backend.vercel.app/auth/signup`, {
         email: user,

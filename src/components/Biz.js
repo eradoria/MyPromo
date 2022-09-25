@@ -1,15 +1,14 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect } from "react";
 import Background from "../images/france.jpg";
-import Map from "./Map"
+import Map from "./Map";
 import "../Biz.css";
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 
 function Biz(props) {
-  console.log('props here',props)
+  console.log("props here", props);
 
   // const filter = useContext(`${bizFilter}`)
   // console.log('filter here',filter)
-
 
   const [cards, setCards] = useState([]);
   const [like, setLike] = useState(0);
@@ -36,10 +35,10 @@ function Biz(props) {
   function handleLike() {
     if (likeActive) {
       setLikeActive(false);
-      setLike(like-1);
+      setLike(like - 1);
     } else {
       setLikeActive(true);
-      setLike(like+1);
+      setLike(like + 1);
     }
   }
 
@@ -56,7 +55,7 @@ function Biz(props) {
     >
       {cards.map((x) => {
         return (
-          <div className="BizMainContainer" key= {x.id}>
+          <div className="BizMainContainer" key={x.id}>
             <h1>Welcome To</h1>
             <h1>{x.company_name}</h1>
             <div className="HorizontalRule" />
@@ -83,14 +82,19 @@ function Biz(props) {
               </div>
             </div>
             <div className="LikeContainer">
-              <button className={[likeActive ? 'active-like': 'LikeButton']} onClick={handleLike}>Likes: {like}</button>
+              <button
+                className={[likeActive ? "active-like" : "LikeButton"]}
+                onClick={handleLike}
+              >
+                Likes: {like}
+              </button>
             </div>
           </div>
         );
       })}
       <div className="RightSideContainer">
         <div className="MapContainer">
-          <Map/>
+          <Map />
         </div>
         <div className="ProductContainer">products</div>
       </div>

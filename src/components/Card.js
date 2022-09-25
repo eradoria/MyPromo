@@ -66,7 +66,7 @@ export function Card(props) {
                     className="card-button"
                     onClick={() => setFliter(x.id)}
                   >
-                    {/* <Link to={`/${x.id}`}> Details</Link> */}
+                    <Link to={`/${x.id}`}> Details</Link>
                   </button>
                 ) : (
                   <h3>log in for details</h3>

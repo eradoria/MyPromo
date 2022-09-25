@@ -1,9 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import "../Home.css";
 import Background from "../images/townsquare.jpg";
-import CardFront from "../images/companyLogo.png";
 import { Card } from "./Card";
-import Data from "../data.json";
 
 function Home() {
   return (
@@ -17,7 +15,7 @@ function Home() {
         opacity: "70%",
       }}
     >
-     <Card />
+      <Card />
     </div>
   );
 }
