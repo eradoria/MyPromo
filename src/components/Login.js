@@ -11,7 +11,7 @@ function Login() {
   const [user, setUser] = useState("");
   const [password, setPassword] = useState("");
   const [newUser, setNewUser] = useState(false);
-  const [userLoggedIn, setUserLoggedIn] = useState(false);
+  // const [userLoggedIn, setUserLoggedIn] = useState(false);
   const [signUpHidden, setSignUpHidden] = useState(true);
 
   const loggedIn = (e) => {
@@ -30,7 +30,7 @@ function Login() {
         console.log(response);
         document.cookie = `jwt=${response.headers.authorization};max-age=60*10000`;
         loggedIn();
-        setUserLoggedIn(true);
+        // setUserLoggedIn(true);
       });
   };
 

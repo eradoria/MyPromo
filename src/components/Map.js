@@ -23,6 +23,7 @@ const Map = (props) => {
   );
   const [lat, setLat] = useState(0);
   const [lng, setLng] = useState(0);
+  // eslint-disable-next-line
   const [map, setMap] = useState(null);
 
   const { isLoaded } = useJsApiLoader({

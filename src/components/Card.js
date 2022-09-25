@@ -12,7 +12,6 @@ export function Card(props) {
 
   const [cards, setCards] = useState([]);
   const [flip, setFlip] = useState(false);
-  const [fliter, setFliter] = useState("");
 
   useEffect(() => {
     const fetchData = async () => {
@@ -63,10 +62,7 @@ export function Card(props) {
               </div>
               <div className="card-button-container">
                 {checkAuth() ? (
-                  <button
-                    className="card-button"
-                    onClick={() => setFliter(x.id)}
-                  >
+                  <button className="card-button">
                     <Link to={`/${x.id}`}> Details</Link>
                   </button>
                 ) : (
