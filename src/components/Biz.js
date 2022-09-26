@@ -31,7 +31,6 @@ function Biz(props) {
     console.log(cards);
   }, [cards]);
 
-  
   function handleLike() {
     if (likeActive) {
       setLikeActive(false);
@@ -41,7 +40,7 @@ function Biz(props) {
       setLike(like + 1);
     }
   }
-  
+
   // const biz = cards.filter((x) => x.id == id)
 
   return (
@@ -56,7 +55,8 @@ function Biz(props) {
       }}
     >
       {cards
-        .filter(x => x.id == id)
+       // eslint-disable-next-line
+        .filter((x) => x.id == id)
         .map((x) => {
           return (
             <div className="BizMainContainer" key={x.id}>
