@@ -41,7 +41,7 @@
   text-align: center;
   height: 20vh;
   width: 30vw;
-  gap: 10px;
+  gap: 12px;
   text-overflow: ellipsis;
   overflow: hidden;
 }

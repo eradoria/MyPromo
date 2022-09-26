@@ -11,27 +11,31 @@ function Biz(props) {
   const { id } = useParams();
   console.log(id);
 
+  
   const [cards, setCards] = useState([]);
   const [like, setLike] = useState(0);
   const [likeActive, setLikeActive] = useState(false);
-
+  
   useEffect(() => {
     const fetchData = async () => {
-      const data = await fetch(`https://js-311-backend.vercel.app/promo/`);
+      const data = await fetch(
+        `https://js-311-backend.vercel.app/promo/`
+        );
+        
+        const json = await data.json();
+        setCards(json);
+      };
+      
+      fetchData();
+    }, []);
+    
+    useEffect(() => {
+      console.log("updated");
+      console.log(cards);
+    }, [cards]);
+    
+    // const biz = cards.find(x => x.id == id.id)
 
-      const json = await data.json();
-      setCards(json);
-    };
-
-    fetchData();
-  }, []);
-
-  useEffect(() => {
-    console.log("updated");
-    console.log(cards);
-  }, [cards]);
-
-  
   function handleLike() {
     if (likeActive) {
       setLikeActive(false);
@@ -41,8 +45,6 @@ function Biz(props) {
       setLike(like + 1);
     }
   }
-  
-  // const biz = cards.filter((x) => x.id == id)
 
   return (
     <div
@@ -56,7 +58,7 @@ function Biz(props) {
       }}
     >
       {cards
-        .filter(x => x.id == id)
+        // .filter(x => x.id == id.id)
         .map((x) => {
           return (
             <div className="BizMainContainer" key={x.id}>
