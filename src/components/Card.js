@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../Card.css";
-import CardFront from "../images/companyLogo.png";
+// import CardFront from "../images/companyLogo.png";
 import { checkAuth } from "../App";
 import { Link } from "react-router-dom";
 
@@ -41,14 +41,15 @@ export function Card(props) {
             <div
               className="front"
               style={{
-                background: `url(${CardFront})`,
+                // background: `url(${CardFront})`,
+                background: `url(${x.URL})`,
                 backgroundPosition: "center",
                 backgroundSize: "100% 100%",
                 backgroundRepeat: "no-repeat",
-                opacity: "90%",
+                opacity: "100%",
               }}
             >
-              <h3>{x.company_name}</h3>
+              {/* <h3>{x.company_name}</h3> */}
             </div>
             <div className="back">
               <div className="card-body">
