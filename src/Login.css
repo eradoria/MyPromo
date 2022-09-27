@@ -185,3 +185,19 @@ button {
   width: 100%;
   gap: 10px;
 }
+/* ///////////////////////LAPTOP SIZE */
+
+@media screen and (max-width: 1400px) {
+  .MainContainer {
+    height: 80vh;
+    gap: 0px;
+  }
+
+  .IconContainer {
+    margin: 0;
+  }
+
+  .SignUpContainer {
+    height: 50vh;
+  }
+}

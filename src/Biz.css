@@ -95,6 +95,30 @@
   color: rgb(0, 132, 255);
   cursor: pointer;
 }
+
+.LikeButton {
+  width: 180px;
+  background: gainsboro;
+  border-radius: 8px;
+  font-size: 20px;
+  color: black;
+  text-align: center;
+  overflow: hidden;
+  cursor: pointer;
+  text-transform: none;
+}
+
+.active-like {
+  width: 180px;
+  background: #008cba;
+  border-radius: 8px;
+  font-size: 20px;
+  color: black;
+  text-align: center;
+  overflow: hidden;
+  cursor: pointer;
+  text-transform: none;
+}
 /* 
 ///////////////////////////////////////////// */
 .RightSideContainer {
@@ -141,8 +165,9 @@
 }
 
 .ProductContainer {
+  padding: 15px;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   height: 30vh;
   width: 60vw;
@@ -153,28 +178,35 @@
   color: rgb(15, 15, 15);
   text-transform: uppercase;
   letter-spacing: 0.4rem;
+  /* gap: 15px; */
 }
 
-.LikeButton {
-  width: 180px;
-  background: gainsboro;
-  border-radius: 8px;
-  font-size: 20px;
-  color: black;
-  text-align: center;
-  overflow: hidden;
-  cursor: pointer;
-  text-transform: none;
+.ProductContainer .img1 {
+  height: 25vh;
+  width: 20vw;
+  border-radius: 20px;
+}
+.ProductContainer .img2 {
+  height: 25vh;
+  width: 18vw;
+  border-radius: 20px;
+}
+.ProductContainer .img3 {
+  height: 25vh;
+  width: 15vw;
+  border-radius: 20px;
 }
 
-.active-like {
-  width: 180px;
-  background: #008cba;
-  border-radius: 8px;
-  font-size: 20px;
-  color: black;
-  text-align: center;
-  overflow: hidden;
-  cursor: pointer;
-  text-transform: none;
+/* ////////////////////////////////LAP TOP SIZE ////////////////////////////////////*/
+@media screen and (max-width: 1400px) {
+  .BizMainContainer {
+    height: 80vh;
+  }
+
+  .InfoContainer {
+    height: 30vh;
+    font-size: 15px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
 }

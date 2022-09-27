@@ -28,9 +28,8 @@ function Login() {
       })
       .then((response) => {
         console.log(response);
-        document.cookie = `jwt=${response.headers.authorization};max-age=60*10000`;
+        document.cookie = `jwt=${response.headers.authorization};max-age=60*1000`;
         loggedIn();
-        // setUserLoggedIn(true);
       });
   };
 

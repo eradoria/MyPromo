@@ -59,3 +59,13 @@
 .card-button-container {
   padding-top: 30px;
 }
+
+
+/* ////////////////////////////////LAP TOP SIZE ////////////////////////////////////*/
+@media screen and (max-width: 1400px) {
+  .card{
+    height: 300px;
+    width: 200px;
+  }
+
+}

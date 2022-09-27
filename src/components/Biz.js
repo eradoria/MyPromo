@@ -55,7 +55,7 @@ function Biz(props) {
       }}
     >
       {cards
-       // eslint-disable-next-line
+        // eslint-disable-next-line
         .filter((x) => x.id == id)
         .map((x) => {
           return (
@@ -96,12 +96,53 @@ function Biz(props) {
             </div>
           );
         })}
-      <div className="RightSideContainer">
-        <div className="MapContainer">
-          <Map />
-        </div>
-        <div className="ProductContainer">products</div>
-      </div>
+      {cards
+        // eslint-disable-next-line
+        .filter((x) => x.id == id)
+        .map((x) => {
+          return (
+            <div className="RightSideContainer">
+              <div className="MapContainer">
+                <Map />
+              </div>
+              <div className="ProductContainer">
+                <div
+                  className="img1"
+                  style={{
+                    // background: `url(${CardFront})`,
+                    background: `url(${x.p1})`,
+                    backgroundPosition: "center",
+                    backgroundSize: "100% 100%",
+                    backgroundRepeat: "no-repeat",
+                    opacity: "100%",
+                  }}
+                ></div>
+                <div
+                  className="img2"
+                  style={{
+                    // background: `url(${CardFront})`,
+                    background: `url(${x.p2})`,
+                    backgroundPosition: "center",
+                    backgroundSize: "100% 100%",
+                    backgroundRepeat: "no-repeat",
+                    opacity: "100%",
+                  }}
+                ></div>
+                <div
+                  className="img3"
+                  style={{
+                    // background: `url(${CardFront})`,
+                    background: `url(${x.p3})`,
+                    backgroundPosition: "center",
+                    backgroundSize: "100% 100%",
+                    backgroundRepeat: "no-repeat",
+                    opacity: "100%",
+                  }}
+                ></div>
+              </div>
+            </div>
+          );
+        })}
     </div>
   );
 }
