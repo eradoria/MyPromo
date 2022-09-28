@@ -1,6 +1,6 @@
 import React from "react";
 import "../Home.css";
-import Background from "../images/townsquare.jpg";
+import Background from "../images/rosepetals.png";
 import { Card } from "./Card";
 
 function Home() {
@@ -12,7 +12,7 @@ function Home() {
         backgroundPosition: "center",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
-        opacity: "70%",
+        opacity: "100%",
       }}
     >
       <Card />

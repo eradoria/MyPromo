@@ -53,19 +53,17 @@
   border-radius: 0.8rem;
   backdrop-filter: blur(8.5px);
   box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.3);
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) , rgb(52, 52, 52) 40% );
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgb(52, 52, 52) 40%);
 }
 
 .card-button-container {
   padding-top: 30px;
 }
 
-
 /* ////////////////////////////////LAP TOP SIZE ////////////////////////////////////*/
 @media screen and (max-width: 1400px) {
-  .card{
+  .card {
     height: 300px;
     width: 200px;
   }
-
 }

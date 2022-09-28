@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import Background from "../images/france.jpg";
+import Background from "../images/rosepetals.png";
 import Map from "./Map";
 import "../Biz.css";
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
@@ -27,9 +27,18 @@ function Biz(props) {
   }, []);
 
   useEffect(() => {
+    const pageLiked = window.localStorage.getItem("liked");
+    setLikeActive(JSON.parse(pageLiked));
+  }, []);
+
+  useEffect(() => {
     console.log("updated");
     console.log(cards);
   }, [cards]);
+
+  useEffect(() => {
+    window.localStorage.setItem("liked", JSON.stringify(likeActive));
+  }, [likeActive]);
 
   function handleLike() {
     if (likeActive) {
