@@ -68,7 +68,10 @@ function Biz(props) {
         .filter((x) => x.id == id)
         .map((x) => {
           return (
-            <div className="BizMainContainer" key={x.id}>
+            <div className="BizCard" key={x.id}>
+              <div class="profile-img">
+                <img src={`${x.URL}`} alt='biz-logo' />
+              </div>
               <h1>Welcome To</h1>
               <h1>{x.company_name}</h1>
               <div className="HorizontalRule" />

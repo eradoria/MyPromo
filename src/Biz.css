@@ -8,22 +8,78 @@
   gap: 30px;
 }
 
-.BizMainContainer {
+.BizCard {
   /* border: solid red 1px; */
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 60vh;
+  height: 65vh;
   width: 25vw;
   gap: 10px;
   padding-top: 15px;
-  background: rgba(255, 255, 255, 0.15);
+  background-color: rgba(255, 255, 255, 0.15);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(18.5px);
+  backdrop-filter: blur(4.5px);
   border-radius: 10px;
   color: rgb(15, 15, 15);
   text-transform: uppercase;
   letter-spacing: 0.4rem;
+}
+
+.BizCard::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(0deg, #59fc72, #02bafc);
+  width: 0;
+  height: 0;
+  z-index: -1;
+  border-radius: inherit;
+}
+
+.BizCard:hover:before {
+  animation: fill 1s ease-in-out forwards;
+}
+
+.profile-img {
+  width: 9em;
+  height: 8em;
+  margin: -4em auto 0 auto;
+  border-radius: 50%;
+  background: linear-gradient(0, #59fc72, #02bafc);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 0 0.5em #5c606c;
+}
+
+.BizCard .profile-img,
+.BizCard::before {
+  background: linear-gradient(0, #c8c8c8, #033fb0);
+}
+
+.profile-img img {
+  width: 90%;
+  height: 90%;
+  border-radius: inherit;
+}
+
+@keyframes fill {
+  40% {
+    width: 100%;
+    height: 0.5em;
+  }
+  50% {
+    width: 100%;
+    height: 0.5em;
+  }
+
+  100% {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .MainContainer h1,
