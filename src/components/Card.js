@@ -67,9 +67,7 @@ export function Card(props) {
                     <Link to={`/${x.id}`}> Details</Link>
                   </button>
                 ) : (
-                  <button>
-                    <Link to={`/login`}>Log In</Link>
-                  </button>
+                  <h3>Log In To see More Details</h3>
                 )}
               </div>
             </div>

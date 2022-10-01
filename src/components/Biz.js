@@ -69,8 +69,8 @@ function Biz(props) {
         .map((x) => {
           return (
             <div className="BizCard" key={x.id}>
-              <div class="profile-img">
-                <img src={`${x.URL}`} alt='biz-logo' />
+              <div className="profile-img">
+                <img src={`${x.URL}`} alt="biz-logo" />
               </div>
               <h1>Welcome To</h1>
               <h1>{x.company_name}</h1>
@@ -113,9 +113,9 @@ function Biz(props) {
         .filter((x) => x.id == id)
         .map((x) => {
           return (
-            <div className="RightSideContainer">
+            <div className="RightSideContainer" key={x.id}>
               <div className="MapContainer">
-                <Map />
+                <Map address={`${x.address}`} />
               </div>
               <div className="ProductContainer">
                 <div

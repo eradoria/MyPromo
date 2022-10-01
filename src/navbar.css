@@ -42,6 +42,23 @@ a {
   background: rgb(0, 48, 126);
 }
 
+.nav-item {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-item .home {
+  outline: solid 1px darkgray;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.nav-item .login {
+  outline: solid 1px darkgray;
+  border-radius: 10px;
+  padding: 10px;
+}
+
 .nav-brand {
   text-transform: uppercase;
   font-weight: bold;

@@ -1,12 +1,13 @@
 import React, { useCallback, useState, useMemo } from "react";
 import { GoogleMap, useJsApiLoader, Marker } from "@react-google-maps/api";
 
-const apiKey = process.env.REACT_MAPS_API_KEY;
+// const apiKey = process.env.REACT_MAPS_API_KEY;
+const apiKey = "AIzaSyDgF8uBNCWRm42BNoBUQkrj0XyIymW9jG4";
 
 const containerStyle = {
   width: "95%",
   height: "400px",
-  marginBottom: "2rem",
+  marginBottom: "3rem",
 };
 
 const Map = (props) => {
@@ -30,8 +31,6 @@ const Map = (props) => {
     id: "google-map-script",
     googleMapsApiKey: apiKey,
   });
-
-  // const mapStyle = useCallback((map) => (mapRef.current = map), []);
 
   const onLoad = useCallback(
     (map) => {

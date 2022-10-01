@@ -15,6 +15,7 @@ import ErrorPage from "./components/ErrorPage";
 import Navigation from "./components/navigation";
 
 
+
 export const checkAuth = () => {
   const cookies = cookie.parse(document.cookie);
   return cookies["loggedIn"] ? true : false;
