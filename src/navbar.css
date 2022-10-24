@@ -28,6 +28,7 @@ a {
   color: darkgray;
   font-size: 20px;
 }
+
 .nav h3 {
   text-decoration: none;
   color: darkgray;
@@ -64,7 +65,7 @@ a {
   font-weight: bold;
 }
 
-.nav_menu {
+.nav-menu {
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -88,7 +89,8 @@ a {
   .nav-toggler {
     display: block;
   }
-  .nav_menu {
+  .nav-menu {
+    display: flex;
     position: fixed;
     top: 7vh;
     right: 0;
@@ -101,18 +103,18 @@ a {
   }
 }
 
-/* /////nav Active */
+/* ///////////////////////////////////////nav Active */
 
 .nav-active {
   transform: translateX(0);
 }
 
-/* //// Nav toggler */
+/* ///////////////////////////////////////// Nav toggler */
 .toggle .line1 {
   transform: rotate(-45deg) translate(-4px, 5px);
 }
 .toggle .line3 {
-  opacity: 0;
+  opacity: 10;
 }
 .toggle .line3 {
   transform: rotate(45deg) translate(-4px, -5px);

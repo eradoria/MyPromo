@@ -6,3 +6,13 @@
   grid-template-columns: repeat(auto-fill, minmax(1000px, 1fr));
   gap: 30px;
 }
+
+/* ////////////////////////////////Phone SIZE ////////////////////////////////////*/
+
+@media screen and (max-width: 700px) {
+  .home-container{
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 30px;
+  overflow:auto;
+  }
+}

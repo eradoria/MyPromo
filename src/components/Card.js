@@ -58,7 +58,7 @@ export function Card(props) {
                 <h3>Product:</h3>
                 <h3> {x.product}</h3> <br />
                 <h3>Address:</h3>
-                {x.address} <br />
+                {x.address} <br/>
                 {x.city}
               </div>
               <div className="card-button-container">

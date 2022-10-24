@@ -81,6 +81,9 @@ function Login() {
         <div className="ButtonContainer" onClick={handleSubmit}>
           <button type="submit">Login </button>
         </div>
+        <div className="ButtonContainer2" onClick={signUpForm}>
+          <button type="submit">signup </button>
+        </div>
 
         <h3>Or Follow Us On</h3>
         <div className="HorizontalRule" />
@@ -107,7 +110,7 @@ function Login() {
         <div className="SignUpContainer">
           <div className="NewUserText">
             <h2 className="WelcomeText">
-              New User <br /> Fill Out Form Below
+              New User <br /> Fill Out Below
             </h2>
           </div>
           <div className="SignUpInputContainer">

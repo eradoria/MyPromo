@@ -56,6 +56,10 @@ input {
   justify-content: center;
 }
 
+.ButtonContainer2 {
+  display: none;
+}
+
 button {
   background: linear-gradient(to right, rgb(0, 48, 126) 0%, #03217b 79%);
   text-transform: uppercase;
@@ -185,11 +189,12 @@ button {
   width: 100%;
   gap: 10px;
 }
-/* ///////////////////////LAPTOP SIZE */
+/* ///////////////////////LAPTOP SIZE ////////////////////////////////////////*/
 
 @media screen and (max-width: 1400px) {
   .MainContainer {
-    height: 80vh;
+    height: 55vh;
+    width: 40vh;
     gap: 0px;
   }
 
@@ -198,6 +203,46 @@ button {
   }
 
   .SignUpContainer {
-    height: 50vh;
+    height: 30vh;
+  }
+}
+/* ///////////////////////Phone SIZE ///////////////////////*/
+
+@media screen and (max-width: 500px) {
+  .MainContainer {
+    height: 60vh;
+    width: 40vh;
+    gap: 0px;
+    font-size: 12px;
+  }
+
+  .banner {
+    width: 80%;
+    margin-bottom: 2rem;
+  }
+
+  .ButtonContainer2 {
+    margin: 0rem 0 2rem 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .HorizontalRule {
+    display: none;
+  }
+
+  h3 {
+    display: none;
+  }
+
+  .IconContainer {
+    margin: 0;
+    display: none;
+  }
+
+  .SignUpContainer {
+    display: none;
   }
 }
