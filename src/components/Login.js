@@ -13,6 +13,7 @@ function Login() {
   const [newUser, setNewUser] = useState(false);
   // const [userLoggedIn, setUserLoggedIn] = useState(false);
   const [signUpHidden, setSignUpHidden] = useState(true);
+  // const [banner, setBanner] = useState("");
 
   const loggedIn = (e) => {
     document.cookie = "loggedIn=true;max-age=60*10000";
@@ -61,7 +62,7 @@ function Login() {
     >
       <div className="MainContainer">
         <h1 className="WelcomeText">Welcome</h1>
-        {newUser ? <h2 className="banner">New User! Sign In</h2> : ""}
+        {newUser ? <h2 className="banner">Welcome New User!</h2> : ""}
         <div className="InputContainer">
           <input
             type="email"

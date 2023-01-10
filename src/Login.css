@@ -193,9 +193,8 @@ button {
 
 @media screen and (max-width: 1400px) {
   .MainContainer {
-    height: 55vh;
-    width: 40vh;
-    gap: 0px;
+    height: auto;
+    width: auto;
   }
 
   .IconContainer {
@@ -203,16 +202,16 @@ button {
   }
 
   .SignUpContainer {
-    height: 30vh;
+    height: auto;
+    padding: 10px;
   }
 }
 /* ///////////////////////Phone SIZE ///////////////////////*/
 
 @media screen and (max-width: 500px) {
   .MainContainer {
-    height: 60vh;
-    width: 40vh;
-    gap: 0px;
+    height: auto;
+    width: auto;
     font-size: 12px;
   }
 
@@ -233,7 +232,7 @@ button {
     display: none;
   }
 
-  h3 {
+  .MainContainer h3 {
     display: none;
   }
 
@@ -244,5 +243,9 @@ button {
 
   .SignUpContainer {
     display: none;
+  }
+
+  .SignUpContainer button {
+    height: auto;
   }
 }
